@@ -30,7 +30,7 @@ Railroads are one of the most asset-intensive industries in the world. In additi
 
 The picture above shows a point machine (also known as a point motor, switch machine or switch motor). A point machine is a device for operating railway turnouts especially at a distance (Wikipedia 2009).
 
-There are two types of delays in railroads; AKV (emergency) and UKV (not so urgent). Based on data collected between Oslo S to Asker + Brobekk from January to May, the visualization below clearly shows that the amount of AKV’s has had a positive turnaround with a tradeoff in UKV’s where there has been fewer AKV’s each and every month in 2017 than earlier.
+There are two types of delays in railroads; AKV (acute immediate corrective maintenance) and UKV (deferred corrective maintenance). Based on data collected between Oslo S to Asker + Brobekk from January to May, the visualization below clearly shows that the amount of AKV’s has had a positive turnaround with a tradeoff in UKV’s where there has been fewer AKV’s each and every month in 2017 than earlier.
 
 ![akvvsukv](images/akvvsukv.png)
 
