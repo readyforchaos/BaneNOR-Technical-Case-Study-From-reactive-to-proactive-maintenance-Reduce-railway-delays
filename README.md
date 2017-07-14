@@ -1,22 +1,22 @@
 ---
 layout: post
-title: "BaneNOR Technical Case Study – From reactive to proactive maintenance: Reduce railway delays"
+title: "Bane NOR Technical Case Study – From reactive to proactive maintenance: Reduce railway delays"
 author: "Anders Gill"
 #author-image: "{{ site.baseurl }}/images/authors/photo.jpg"
 date: 2017-07-14
 categories: [Machine Learning]
 color: "blue"
 #image: "{{ site.baseurl }}/images/imagename.png" #should be ~350px tall
-excerpt: This project had the key goal of taking BaneNOR closer from reactive to proactive maintenance. 
+excerpt: This project had the key goal of taking Bane NOR closer from reactive to proactive maintenance. 
 language: [English]
 verticals: [Rail]
 geolocation: [Europe]
 #permalink: /<page-title>.html
 ---
 
-# BaneNOR Technical Case Study – From reactive to proactive maintenance: Reduce railway delays
+# Bane NOR Technical Case Study – From reactive to proactive maintenance: Reduce railway delays
 
-Downtime is a crisis in most vertices, but in some verticals, they have greater importance and can have larger consequences than others. The main reason for downtime is often equipment coupled with a sophisticated infrastructure that fails. Downtime due to equipment failure often has major consequences for further operation, customer satisfaction and, in particular, the ability of the tool to generate maximum income. BaneNOR wants to avoid such downtime by implementing smart methods to predict errors for the points (switches) in its complicated railway infrastructure. With the current situation, the technology has been utilized in its worst efficiency and is at its most primitive it will ever be for railroads. The future of railroads in combination with technology is only going to get better from here. This case study goes through the process followed to achieve success and decrease downtime.
+Downtime is a crisis in most industries, but in some industries, they have greater importance and can have larger consequences than others. The main reason for downtime is often equipment coupled with a sophisticated infrastructure that fails. Downtime due to equipment failure often has major consequences for further operation, customer satisfaction and, in particular, the ability of the tool to generate maximum income. Bane NOR wants to avoid such downtime by implementing smart methods to predict errors for the points (switches) in its complicated railway infrastructure. With the current situation, the technology has been utilized in its worst efficiency and is at its most primitive it will ever be for railroads. The future of railroads in combination with technology is only going to get better from here. This case study goes through the process followed to achieve success and decrease downtime.
 
 ![predictive chart](images/predictivechart.png)
 
@@ -109,7 +109,7 @@ The Team Data Science Process (TDSP) helps you define where you are in the proje
 
 ### Day 0 – The data day
 
-The data day was a day where we planned to look at the data (volume, variety, veracity, and velocity) within the data source to become as prepared as we could before the hackfest. The way the data came in was through a Postgres DB located On-Premise at BaneNOR’s facilities. Knowing that we would like to use the power of Machine Learning in the cloud through Azure Machine Learning Studio (AMLS), we knew that creating a direct connection to the DB could potentially be problematic. We decided to make extractions and aggregations of the data prior to the hackfest so that we had specific CSV-files to work with during the execution of the hackfest. 
+The data day was a day where we planned to look at the data (volume, variety, veracity, and velocity) within the data source to become as prepared as we could before the hackfest. The way the data came in was through a Postgres DB located On-Premise at Bane NOR’s facilities. Knowing that we would like to use the power of Machine Learning in the cloud through Azure Machine Learning Studio (AMLS), we knew that creating a direct connection to the DB could potentially be problematic. We decided to make extractions and aggregations of the data prior to the hackfest so that we had specific CSV-files to work with during the execution of the hackfest. 
 
 After having looked at the data, we decided to follow the concept of RFM (Recency, Frequency, Monetary value) extracted from the TDSP framework and brainstormed a set of questions that we wanted to know the answers to. The set of questions we came up with was the following:
 
@@ -126,13 +126,13 @@ After having looked at the data, we decided to follow the concept of RFM (Recenc
 - Who implemented the switchers?
 - When will the switch fail?
 
-Being able to answer the questions above would already solve a lot of BaneNOR’s challenges. Having a goal of answering all the questions above within the scope of the hackfest, could get comprehensive. We decided that we would make a decision on what to work on during the start of the hackfest.
+Being able to answer the questions above would already solve a lot of Bane NOR’s challenges. Having a goal of answering all the questions above within the scope of the hackfest, could get comprehensive. We decided that we would make a decision on what to work on during the start of the hackfest.
 
 For now, being able to define the objectives, identifying the data source and understanding the data; was good enough to kick off the hackfest.
 
 ### Hackfest kick off
 
-Having conducted a successful data day, we set off to start the hackfest. We revised the current approach that BaneNOR conducts and identified that the [predictive maintenance for an aerospace experiment in AMLS would be a suitable scenario to replicate](https://gallery.cortanaintelligence.com/Solution/Predictive-Maintenance-for-Aerospace-4). This is because BaneNOR would like to calculate the remaining useful life in days (RUL) of the switches, which is based on a regression analysis. Before substituting the data from the sample with our own, we decided to look at other approaches that might give us other information from what we have to work with, which we didn’t know from before. 
+Having conducted a successful data day, we set off to start the hackfest. We revised the current approach that Bane NOR conducts and identified that the [predictive maintenance for an aerospace experiment in AMLS would be a suitable scenario to replicate](https://gallery.cortanaintelligence.com/Solution/Predictive-Maintenance-for-Aerospace-4). This is because Bane NOR would like to calculate the remaining useful life in days (RUL) of the switches, which is based on a regression analysis. Before substituting the data from the sample with our own, we decided to look at other approaches that might give us other information from what we have to work with, which we didn’t know from before. 
 
 On Sunday (one day prior to the hackfest), a switch actually broke down on the Central station in Oslo. We pulled the same switch up on the monitor within the current system and verified that there is data before failure. We found this switch interesting in particular since it had been working for a long time and just recently failed. We decided to focus on this switch to see if we could produce some new information from the data we already had.
 
@@ -537,20 +537,20 @@ array([ 4.50000000+0.j        ,  2.08155948-1.65109876j,
 
 ## Conclusion
 
-Predictive maintenance encompasses a variety of topics, including but not limited to failure prediction, failure diagnosis (root cause analysis), failure detection, failure type classification, and recommendation of mitigation or maintenance actions after failure. After this hackfest, BaneNOR is definitely getting closer to predictive maintenance from being in the reactive maintenance zone. BaneNOR’s dream is to be able to foresee how many actions a switch has left until it fails. Even though we didn’t get there, the hackfest has ascended the current protocol to take use of smarter techniques and gain more information from the data that they already have. The existing system will gain much intelligence from implementing the methods that were yielded from this hackfest. 
+Predictive maintenance encompasses a variety of topics, including but not limited to failure prediction, failure diagnosis (root cause analysis), failure detection, failure type classification, and recommendation of mitigation or maintenance actions after failure. After this hackfest, Bane NOR is definitely getting closer to predictive maintenance from being in the reactive maintenance zone. Bane NOR’s dream is to be able to foresee how many actions a switch has left until it fails. Even though we didn’t get there, the hackfest has ascended the current protocol to take use of smarter techniques and gain more information from the data that they already have. The existing system will gain much intelligence from implementing the methods that were yielded from this hackfest. 
 
-We were lucky that a switch failed recently. On the flipside of things, we decided to use this specific switch as the basis for our analysis and started digging into its data. It turned out that, based on the statistical techniques used (RSS), we figured that this switched could have been saved as early as March (if this technique was implemented in the existing system); three full months before the switch actually failed. Not only did this confirm the theory of predictive maintenance through the use of RSS in the specific scenario, it actually identified a new type of class (failure) called “over stroke”. Over stroke is a mechanical failure inside the point machine and not the switch tongue itself. One of those things that the current system cannot detect because it only measures voltage/amps and validates the observation versus the covered area based on the maximum/minimum values.
+We were lucky that a switch failed recently. On the flipside of things, we decided to use this specific switch as the basis for our analysis and started digging into its data. It turned out that, based on the statistical techniques used (RSS), a maintenance operation could have been conducted on this particular switch to avoid failure three month before it happened if the RSS technique had been implemented in the existing system. Not only did this confirm the theory of predictive maintenance through the use of RSS in the specific scenario, it actually identified a new type of class (failure) called “over stroke”. Over stroke is a mechanical failure inside the point machine and not the switch tongue itself. One of those things that the current system cannot detect because it only measures voltage/amps and validates the observation versus the covered area based on the maximum/minimum values.
 
 Another success to this endeavor was the use of FFT on the energy to transform it into another representation; vibration/friction. Based on the FFT chart, it was easy to see that when maintenance was conducted on a particular switch, the vibration decreased significantly; proving that injecting oil and other fluids to smooth the point machine actually reduces friction thus requiring less energy to move. 
 
-Even though there weren’t that much machine learning involved in the findings above, BaneNOR is still keen to leverage tools like Azure Machine Learning Studio (AMLS) to achieve their goal of identifying the Remaining Useful Life (RUL) for a switch. BaneNOR has gotten a proper introduction to the tool and has already started to experiment with existing experiments in the Cortana Intelligence Gallery that are suitable for their own scenario. Based on the template, BaneNOR are not far away from being able to insert their own data into the tool and leveraging the existing template for their own purpose.
+Even though there weren’t that much machine learning involved in the findings above, Bane NOR is still keen to leverage tools like Azure Machine Learning Studio (AMLS) to achieve their goal of identifying the Remaining Useful Life (RUL) for a switch. Bane NOR has gotten a proper introduction to the tool and has already started to experiment with existing experiments in the Cortana Intelligence Gallery that are suitable for their own scenario. Based on the template, Bane NOR are not far away from being able to insert their own data into the tool and leveraging the existing template for their own purpose.
 
-The hackfest has definitely expanded BaneNOR’s horizon. BaneNOR now has a much larger perspective on what can be achieved, what opportunities there are and where they want to go. 
+The hackfest has definitely expanded Bane NOR’s horizon. Bane NOR now has a much larger perspective on what can be achieved, what opportunities there are and where they want to go. 
 
 
 ## Going forward
 
-BaneNOR will keep on expanding their knowledge on Machine Learning as well as looking at other potential methods of gaining more information from their data. High up on the roadmap for BaneNOR, is the goal of using AMLS to extract more information out of their current data sources, create a predictive model that can calculate the RUL for all of the switches and not only one switch in particular, like we did for the PoC. BaneNOR has an objective of running the current model on all of the switches and find at least one switch that needs service which the current system doesn’t find. Based on this information a work order can be sent out to an engineer. A fully connected production system is therefore not far away from the future pipeline, and BaneNOR and Microsoft are happy with the outcomes of the week-long hackfest and looks forward to similar collaborations. 
+Bane NOR will keep on expanding their knowledge on Machine Learning as well as looking at other potential methods of gaining more information from their data. High up on the roadmap for Bane NOR, is the goal of using AMLS to extract more information out of their current data sources, create a predictive model that can calculate the RUL for all of the switches and not only one switch in particular, like we did for the PoC. Bane NOR has an objective of running the current model on all of the switches and find at least one switch that needs service which the current system doesn’t find. Based on this information a work order can be sent out to an engineer. A fully connected production system is therefore not far away from the future pipeline, and Bane NOR and Microsoft are happy with the outcomes of the week-long hackfest and look forward to similar collaborations. 
 ## Additional resources
 
 [Read more about overfitting](https://en.wikipedia.org/wiki/Overfitting)
