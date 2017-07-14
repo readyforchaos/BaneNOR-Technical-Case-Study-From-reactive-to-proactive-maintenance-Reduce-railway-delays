@@ -16,7 +16,7 @@ geolocation: [Europe]
 
 # Bane NOR Technical Case Study – From reactive to proactive maintenance: Reduce railway delays
 
-Downtime is a crisis in most industries, but in some industries, they have greater importance and can have larger consequences than others. The main reason for downtime is often equipment coupled with a sophisticated infrastructure that fails. Downtime due to equipment failure often has major consequences for further operation, customer satisfaction and, in particular, the ability of the tool to generate maximum income. Bane NOR wants to avoid such downtime by implementing smart methods to predict errors for the points (switches) in its complicated railway infrastructure. With the current situation, the technology has been utilized in its worst efficiency and is at its most primitive it will ever be for railroads. The future of railroads in combination with technology is only going to get better from here. This case study goes through the process followed to achieve success and decrease downtime.
+Downtime is a crisis in most industries, but in some industries, they have greater importance and can have larger consequences than others. The main reason for downtime is often equipment coupled with a sophisticated infrastructure that fails. Downtime due to equipment failure often has major consequences for further operation, customer satisfaction and, in particular, the ability of the tool to generate maximum income. Bane NOR wants to avoid such downtime by implementing smart methods to predict errors for the points (switches) in its complicated railway infrastructure. With the current situation, the monitoring techniques and technology that has been  implemented; has not been fully utilized. The future of railroads in combination with technology is only going to get better from here. This case study goes through the process followed to achieve success and decrease downtime.
 
 ![predictive chart](images/predictivechart.png)
 
@@ -24,9 +24,11 @@ The optimal maintenance timing: higher availability and lower maintenance costs 
 
 ## Problem statement
 
-Railroads are one of the most asset-intensive industries in the world. In addition to tracks, rolling stock and terminals, railroads own communications infrastructure and other assets that must perform perfectly at all times, both for safety and efficiency (IBM 2015). Points account for 33% of all delays in the Norwegian railway system (this has been identified prior to the hackfest). Being able to quantify a metric value for improvement is key in order to assess success. During the 5-day hackfest in June 2017, the core team decided that a decrease of 18% (resulting in 15% fault rate compared to 33%) would be looked upon as a success. This baseline vs. goal fault rate is something that will be tested the following year after the implementation of the new system has been concluded.   
+Railroads are one of the most asset-intensive industries in the world. In addition to tracks, rolling stock and terminals, railroads own communications infrastructure and other assets that must perform perfectly at all times, both for safety and efficiency. Points account for 33% of all delays in the Norwegian railway system (this has been identified prior to the hackfest). Being able to quantify a metric value for improvement is key in order to assess success. During the 5-day hackfest in June 2017, the core team decided that a decrease of 18% (resulting in 15% fault rate compared to 33%) would be looked upon as a success. This baseline vs. goal fault rate is something that will be tested the following year after the implementation of the new system has been concluded.   
 
 ![switch](images/switch.jpg)
+
+The picture above shows a point machine (also known as a point motor, switch machine or switch motor). A point machine is a device for operating railway turnouts especially at a distance (Wikipedia 2009).
 
 There are two types of delays in railroads; AKV (emergency) and UKV (not so urgent). Based on data collected between Oslo S to Asker + Brobekk from January to May, the visualization below clearly shows that the amount of AKV’s has had a positive turnaround with a tradeoff in UKV’s where there has been fewer AKV’s each and every month in 2017 than earlier.
 
@@ -564,7 +566,6 @@ Bane NOR will keep on expanding their knowledge on Machine Learning as well as l
 
 Dataconomy. 2015. PREDICTIVE MAINTENANCE: BIG DATA ON RAILS. http://dataconomy.com/2015/04/predictive-maintenance-big-data-on-rails/.
 
-IBM. 2015. "Predictive maintenance benefits for the railway industry." IBM Travel & Transportation Industry 1-4.
-
 Wikipedia. 2002. Fast Fourier Transform. https://en.wikipedia.org/wiki/Fast_Fourier_transform.
 —. 2013. RSS. https://en.wikipedia.org/wiki/Residual_sum_of_squares.
+—. 2009. Point Machine. https://en.wikipedia.org/wiki/Point_machine
