@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "BaneNOR Technical Case Study ñ From reactive to proactive maintenance: Reduce railway delays"
+title: "BaneNOR Technical Case Study ‚Äì From reactive to proactive maintenance: Reduce railway delays"
 author: "Anders Gill"
 #author-image: "{{ site.baseurl }}/images/authors/photo.jpg"
 date: 2017-07-14
-categories: [Power BI Embedded]
+categories: [Machine Learning]
 color: "blue"
 #image: "{{ site.baseurl }}/images/imagename.png" #should be ~350px tall
 excerpt: This project had the key goal of taking BaneNOR closer from reactive to proactive maintenance. 
@@ -14,7 +14,7 @@ geolocation: [Europe]
 #permalink: /<page-title>.html
 ---
 
-# BaneNOR Technical Case Study ñ From reactive to proactive maintenance: Reduce railway delays
+# BaneNOR Technical Case Study ‚Äì From reactive to proactive maintenance: Reduce railway delays
 
 Downtime is a crisis in most vertices, but in some verticals, they have greater importance and can have larger consequences than others. The main reason for downtime is often equipment coupled with a sophisticated infrastructure that fails. Downtime due to equipment failure often has major consequences for further operation, customer satisfaction and, in particular, the ability of the tool to generate maximum income. BaneNOR wants to avoid such downtime by implementing smart methods to predict errors for the points (switches) in its complicated railway infrastructure. With the current situation, the technology has been utilized in its worst efficiency and is at its most primitive it will ever be for railroads. The future of railroads in combination with technology is only going to get better from here. This case study goes through the process followed to achieve success and decrease downtime.
 
@@ -28,11 +28,11 @@ Railroads are one of the most asset-intensive industries in the world. In additi
 
 ![switch](images/switch.jpg)
 
-There are two types of delays in railroads; AKV (emergency) and UKV (not so urgent). Based on data collected between Oslo S to Asker + Brobekk from January to May, the visualization below clearly shows that the amount of AKVís has had a positive turnaround with a tradeoff in UKVís where there has been fewer AKVís each and every month in 2017 than earlier.
+There are two types of delays in railroads; AKV (emergency) and UKV (not so urgent). Based on data collected between Oslo S to Asker + Brobekk from January to May, the visualization below clearly shows that the amount of AKV‚Äôs has had a positive turnaround with a tradeoff in UKV‚Äôs where there has been fewer AKV‚Äôs each and every month in 2017 than earlier.
 
 ![akvvsukv](images/akvvsukv.png)
 
-The first point machines were monitored in Q3 2016 where electricity (current/force ñ measures the magnetic field around the power cord) and time (time taken to perform switch action) was registered from sensors. Based on these two measures, you can see that the monitoring and the base system implementation conducted in 2017 has had a positive impact on AKV and UKVís. 
+The first point machines were monitored in Q3 2016 where electricity (current/force ‚Äì measures the magnetic field around the power cord) and time (time taken to perform switch action) was registered from sensors. Based on these two measures, you can see that the monitoring and the base system implementation conducted in 2017 has had a positive impact on AKV and UKV‚Äôs. 
 
 ![workorders](images/workorders.png)
 
@@ -84,7 +84,7 @@ Locking: Locking of the switch so that a train can pass
 
 ![operations](images/operations.png)
 
-Referenced to the picture above, the area under the curve is bound by the reference line and the wall on the left and right to the previous/next stage. Each divided part has a utilization percentage out of the total 100% of the section to see how much the observation is from the threshold (see ëUnlockingí). If the variation is too big, the alarm goes off and the monitoring will notify the engineer about a possible error. Based on this information, the only thing the system know is whether the observation has reached its threshold within a stage or not, but not how fast the machine is deteriorating or how fast the area is growing. Three consecutive peaks within a 24 hours time frame will trigger the alarm.
+Referenced to the picture above, the area under the curve is bound by the reference line and the wall on the left and right to the previous/next stage. Each divided part has a utilization percentage out of the total 100% of the section to see how much the observation is from the threshold (see ‚ÄòUnlocking‚Äô). If the variation is too big, the alarm goes off and the monitoring will notify the engineer about a possible error. Based on this information, the only thing the system know is whether the observation has reached its threshold within a stage or not, but not how fast the machine is deteriorating or how fast the area is growing. Three consecutive peaks within a 24 hours time frame will trigger the alarm.
 
 Based on the color of the switch (representing a state), a work order can be so that an engineer conducts some kind of maintenance on the respective switch.
 
@@ -107,9 +107,9 @@ The Team Data Science Process (TDSP) helps you define where you are in the proje
 
 ![tdsp-lifecycle](images/tdsp-lifecycle.png)
 
-### Day 0 ñ The data day
+### Day 0 ‚Äì The data day
 
-The data day was a day where we planned to look at the data (volume, variety, veracity, and velocity) within the data source to become as prepared as we could before the hackfest. The way the data came in was through a Postgres DB located On-Premise at BaneNORís facilities. Knowing that we would like to use the power of Machine Learning in the cloud through Azure Machine Learning Studio (AMLS), we knew that creating a direct connection to the DB could potentially be problematic. We decided to make extractions and aggregations of the data prior to the hackfest so that we had specific CSV-files to work with during the execution of the hackfest. 
+The data day was a day where we planned to look at the data (volume, variety, veracity, and velocity) within the data source to become as prepared as we could before the hackfest. The way the data came in was through a Postgres DB located On-Premise at BaneNOR‚Äôs facilities. Knowing that we would like to use the power of Machine Learning in the cloud through Azure Machine Learning Studio (AMLS), we knew that creating a direct connection to the DB could potentially be problematic. We decided to make extractions and aggregations of the data prior to the hackfest so that we had specific CSV-files to work with during the execution of the hackfest. 
 
 After having looked at the data, we decided to follow the concept of RFM (Recency, Frequency, Monetary value) extracted from the TDSP framework and brainstormed a set of questions that we wanted to know the answers to. The set of questions we came up with was the following:
 
@@ -126,13 +126,13 @@ After having looked at the data, we decided to follow the concept of RFM (Recenc
 - Who implemented the switchers?
 - When will the switch fail?
 
-Being able to answer the questions above would already solve a lot of BaneNORís challenges. Having a goal of answering all the questions above within the scope of the hackfest, could get comprehensive. We decided that we would make a decision on what to work on during the start of the hackfest.
+Being able to answer the questions above would already solve a lot of BaneNOR‚Äôs challenges. Having a goal of answering all the questions above within the scope of the hackfest, could get comprehensive. We decided that we would make a decision on what to work on during the start of the hackfest.
 
 For now, being able to define the objectives, identifying the data source and understanding the data; was good enough to kick off the hackfest.
 
 ### Hackfest kick off
 
-Having conducted a successful data day, we set off to start the hackfest. We revised the current approach that BaneNOR conducts and identified that the [predictive maintenance for an aerospace experiment in AMLS would be a suitable scenario to replicate](https://gallery.cortanaintelligence.com/Solution/Predictive-Maintenance-for-Aerospace-4). This is because BaneNOR would like to calculate the remaining useful life in days (RUL) of the switches, which is based on a regression analysis. Before substituting the data from the sample with our own, we decided to look at other approaches that might give us other information from what we have to work with, which we didnít know from before. 
+Having conducted a successful data day, we set off to start the hackfest. We revised the current approach that BaneNOR conducts and identified that the [predictive maintenance for an aerospace experiment in AMLS would be a suitable scenario to replicate](https://gallery.cortanaintelligence.com/Solution/Predictive-Maintenance-for-Aerospace-4). This is because BaneNOR would like to calculate the remaining useful life in days (RUL) of the switches, which is based on a regression analysis. Before substituting the data from the sample with our own, we decided to look at other approaches that might give us other information from what we have to work with, which we didn‚Äôt know from before. 
 
 On Sunday (one day prior to the hackfest), a switch actually broke down on the Central station in Oslo. We pulled the same switch up on the monitor within the current system and verified that there is data before failure. We found this switch interesting in particular since it had been working for a long time and just recently failed. We decided to focus on this switch to see if we could produce some new information from the data we already had.
 
@@ -146,11 +146,11 @@ The visualization represents the unlocking stage of the swing where the hammer i
 
 ### Residual Sum of Squares exploration
 
-We performed some statistics (Residual Sum of Squares) where we took the error function used in linear regression instead of doing the integral and the difference between the two integrals, we managed to see a magnification in the spikes ñ spikes that we didnít know existed from before. We made a significant finding on day 1 of the hackfest. 
+We performed some statistics (Residual Sum of Squares) where we took the error function used in linear regression instead of doing the integral and the difference between the two integrals, we managed to see a magnification in the spikes ‚Äì spikes that we didn‚Äôt know existed from before. We made a significant finding on day 1 of the hackfest. 
 
 ![operations2](images/operations2.png)
 
-The final spike in the locking section is so thin that it does not trigger the alarm. Whether it was important or not, was something that the current system didnít notify about as it looked upon it as green at all times. It turned out that we managed to identify a new class which we called ìover strokeî. This is a mechanical failure inside the point machine and not the switch (tongue) itself. This is a finding that the current system is unable to detect because it only measures voltages/amps.
+The final spike in the locking section is so thin that it does not trigger the alarm. Whether it was important or not, was something that the current system didn‚Äôt notify about as it looked upon it as green at all times. It turned out that we managed to identify a new class which we called ‚Äúover stroke‚Äù. This is a mechanical failure inside the point machine and not the switch (tongue) itself. This is a finding that the current system is unable to detect because it only measures voltages/amps.
 
 If we focus on the locking stage of the specific switch that recently failed with the actual data, we can clearly see that the condition has deteriorated over time.
 
@@ -168,14 +168,14 @@ def ssd(A,B):
 ```
 We got the signature for the electricity where we generated the function that reshaped the pattern to only include the start of the initialization of the switch for the locking phase and the end of the locking phase. We then looked at the reference for that particular switch where we defined a threshold. This reference threshold would be different compared to the observed signature for over stroke. 
 
-We started the reference from 6íth of January and used the intermediate state of 20íth February, and ended the monitoring at the 3írd of June (which we know has over stroke, but where the switch hasnít failed yet). 
+We started the reference from 6‚Äôth of January and used the intermediate state of 20‚Äôth February, and ended the monitoring at the 3‚Äôrd of June (which we know has over stroke, but where the switch hasn‚Äôt failed yet). 
 
 The threshold for knowing if the switch is suffering from over stroke or not was 0.67. If there is over stroke, the RSS value would be bigger than 0.67.
 
 ![rss](images/rss.png)
 
 Based on the RSS values from January to June, it is easy to see that the switch has slowly been deteriorating.
-The over stroke RSS threshold of 30-50 is the point we know itís going bad. 
+The over stroke RSS threshold of 30-50 is the point we know it‚Äôs going bad. 
 
 ![overstrokerailway](images/overstrokerailway.png)
 
@@ -487,13 +487,13 @@ If we fit our linear model to our data, the fitted line might look something lik
 
 ![3](images/3.png)
 
-For each value of Xi, our model suggests a value Yi which isnít identical to our value which we already have plotted in the example above.
+For each value of Xi, our model suggests a value Yi which isn‚Äôt identical to our value which we already have plotted in the example above.
 
 Based on the model that we have created above, how much variation is there from the Y point from the Y-bar (mean) that is explained by our fitted model. We can get to know this by summing up from I equal 1 to N, our predicted values of Yi (the fitted plots) minus Y-bar all squared. This equation is called Explained Sum of Squares (ESS) because this is the amount of variation in Y which our model explains.
 
 ![4](images/4.png)
 
-In reality, however, itís not often the case that the ESS is the same as the TSS. In order for this to be the case, the model in my example would have to be fitted to each of the points absolutely perfect. Aside from the fact that, that would probably overfit the data (read more about overfitting), it is very unlikely that the ESS would be the same as the TSS. In reality, the ESS is less than the TSS. The Ration between ESS and TSS is somewhat less than 1. The reason for this is because there is almost always a difference between our true values of Y and our fitted values of Y, which I have illustrated in the chart below (the difference between the line (fitted) and the true value (Y)). This is called the Residual Sum of Squares (RSS) because itís the amount that is left over after the model has tried to explain the data. It is essentially the deviations predicted from actual empirical values of data which is what we used for the hackfest to gain more insight from the data.
+In reality, however, it‚Äôs not often the case that the ESS is the same as the TSS. In order for this to be the case, the model in my example would have to be fitted to each of the points absolutely perfect. Aside from the fact that, that would probably overfit the data (read more about overfitting), it is very unlikely that the ESS would be the same as the TSS. In reality, the ESS is less than the TSS. The Ration between ESS and TSS is somewhat less than 1. The reason for this is because there is almost always a difference between our true values of Y and our fitted values of Y, which I have illustrated in the chart below (the difference between the line (fitted) and the true value (Y)). This is called the Residual Sum of Squares (RSS) because it‚Äôs the amount that is left over after the model has tried to explain the data. It is essentially the deviations predicted from actual empirical values of data which is what we used for the hackfest to gain more insight from the data.
 
 ![5](images/5.png)
 
@@ -505,11 +505,11 @@ where yi is the i th value of the variable to be predicted, xi is the i th value
 
 ## Fast Fourier Transform (FFT)
 
-In this section, we are going to look at the Fast Fourier Transform (FFT). The FFT is simply just a different way of looking at a signal. For instance, on an oscilloscope, you tend to look at voltage changing over time; an FFT example shows you instead what voltages are present at each frequency. If you imagine a signal as a bunch of wire tangled together, the FFT will help you to untangle the mess, see what itís made off and see what components are lurking in that signal. If you have a representation of a sine-wave, it would be represented in the FFT by one spike as shown below (because there is one frequency):
+In this section, we are going to look at the Fast Fourier Transform (FFT). The FFT is simply just a different way of looking at a signal. For instance, on an oscilloscope, you tend to look at voltage changing over time; an FFT example shows you instead what voltages are present at each frequency. If you imagine a signal as a bunch of wire tangled together, the FFT will help you to untangle the mess, see what it‚Äôs made off and see what components are lurking in that signal. If you have a representation of a sine-wave, it would be represented in the FFT by one spike as shown below (because there is one frequency):
 
 ![sig](images/sig.png)
 
-But if you plug it in the oscilloscope, what you would actually see is a second spike. And you wouldnít be able to see that in the sine-wave because it is very low level, it is such a minuscule second signal that you have to have something like the FFT to bring it out. 
+But if you plug it in the oscilloscope, what you would actually see is a second spike. And you wouldn‚Äôt be able to see that in the sine-wave because it is very low level, it is such a minuscule second signal that you have to have something like the FFT to bring it out. 
 
 ![sig2](images/sig2.png)
 
@@ -537,20 +537,20 @@ array([ 4.50000000+0.j        ,  2.08155948-1.65109876j,
 
 ## Conclusion
 
-Predictive maintenance encompasses a variety of topics, including but not limited to failure prediction, failure diagnosis (root cause analysis), failure detection, failure type classification, and recommendation of mitigation or maintenance actions after failure. After this hackfest, BaneNOR is definitely getting closer to predictive maintenance from being in the reactive maintenance zone. BaneNORís dream is to be able to foresee how many actions a switch has left until it fails. Even though we didnít get there, the hackfest has ascended the current protocol to take use of smarter techniques and gain more information from the data that they already have. The existing system will gain much intelligence from implementing the methods that were yielded from this hackfest. 
+Predictive maintenance encompasses a variety of topics, including but not limited to failure prediction, failure diagnosis (root cause analysis), failure detection, failure type classification, and recommendation of mitigation or maintenance actions after failure. After this hackfest, BaneNOR is definitely getting closer to predictive maintenance from being in the reactive maintenance zone. BaneNOR‚Äôs dream is to be able to foresee how many actions a switch has left until it fails. Even though we didn‚Äôt get there, the hackfest has ascended the current protocol to take use of smarter techniques and gain more information from the data that they already have. The existing system will gain much intelligence from implementing the methods that were yielded from this hackfest. 
 
-We were lucky that a switch failed recently. On the flipside of things, we decided to use this specific switch as the basis for our analysis and started digging into its data. It turned out that, based on the statistical techniques used (RSS), we figured that this switched could have been saved as early as March (if this technique was implemented in the existing system); three full months before the switch actually failed. Not only did this confirm the theory of predictive maintenance through the use of RSS in the specific scenario, it actually identified a new type of class (failure) called ìover strokeî. Over stroke is a mechanical failure inside the point machine and not the switch tongue itself. One of those things that the current system cannot detect because it only measures voltage/amps and validates the observation versus the covered area based on the maximum/minimum values.
+We were lucky that a switch failed recently. On the flipside of things, we decided to use this specific switch as the basis for our analysis and started digging into its data. It turned out that, based on the statistical techniques used (RSS), we figured that this switched could have been saved as early as March (if this technique was implemented in the existing system); three full months before the switch actually failed. Not only did this confirm the theory of predictive maintenance through the use of RSS in the specific scenario, it actually identified a new type of class (failure) called ‚Äúover stroke‚Äù. Over stroke is a mechanical failure inside the point machine and not the switch tongue itself. One of those things that the current system cannot detect because it only measures voltage/amps and validates the observation versus the covered area based on the maximum/minimum values.
 
 Another success to this endeavor was the use of FFT on the energy to transform it into another representation; vibration/friction. Based on the FFT chart, it was easy to see that when maintenance was conducted on a particular switch, the vibration decreased significantly; proving that injecting oil and other fluids to smooth the point machine actually reduces friction thus requiring less energy to move. 
 
-Even though there werenít that much machine learning involved in the findings above, BaneNOR is still keen to leverage tools like Azure Machine Learning Studio (AMLS) to achieve their goal of identifying the Remaining Useful Life (RUL) for a switch. BaneNOR has gotten a proper introduction to the tool and has already started to experiment with existing experiments in the Cortana Intelligence Gallery that are suitable for their own scenario. Based on the template, BaneNOR are not far away from being able to insert their own data into the tool and leveraging the existing template for their own purpose.
+Even though there weren‚Äôt that much machine learning involved in the findings above, BaneNOR is still keen to leverage tools like Azure Machine Learning Studio (AMLS) to achieve their goal of identifying the Remaining Useful Life (RUL) for a switch. BaneNOR has gotten a proper introduction to the tool and has already started to experiment with existing experiments in the Cortana Intelligence Gallery that are suitable for their own scenario. Based on the template, BaneNOR are not far away from being able to insert their own data into the tool and leveraging the existing template for their own purpose.
 
-The hackfest has definitely expanded BaneNORís horizon. BaneNOR now has a much larger perspective on what can be achieved, what opportunities there are and where they want to go. 
+The hackfest has definitely expanded BaneNOR‚Äôs horizon. BaneNOR now has a much larger perspective on what can be achieved, what opportunities there are and where they want to go. 
 
 
 ## Going forward
 
-BaneNOR will keep on expanding their knowledge on Machine Learning as well as looking at other potential methods of gaining more information from their data. High up on the roadmap for BaneNOR, is the goal of using AMLS to extract more information out of their current data sources, create a predictive model that can calculate the RUL for all of the switches and not only one switch in particular, like we did for the PoC. BaneNOR has an objective of running the current model on all of the switches and find at least one switch that needs service which the current system doesnít find. Based on this information a work order can be sent out to an engineer. A fully connected production system is therefore not far away from the future pipeline, and BaneNOR and Microsoft are happy with the outcomes of the week-long hackfest and looks forward to similar collaborations. 
+BaneNOR will keep on expanding their knowledge on Machine Learning as well as looking at other potential methods of gaining more information from their data. High up on the roadmap for BaneNOR, is the goal of using AMLS to extract more information out of their current data sources, create a predictive model that can calculate the RUL for all of the switches and not only one switch in particular, like we did for the PoC. BaneNOR has an objective of running the current model on all of the switches and find at least one switch that needs service which the current system doesn‚Äôt find. Based on this information a work order can be sent out to an engineer. A fully connected production system is therefore not far away from the future pipeline, and BaneNOR and Microsoft are happy with the outcomes of the week-long hackfest and looks forward to similar collaborations. 
 ## Additional resources
 
 [Read more about overfitting](https://en.wikipedia.org/wiki/Overfitting)
@@ -567,4 +567,4 @@ Dataconomy. 2015. PREDICTIVE MAINTENANCE: BIG DATA ON RAILS. http://dataconomy.c
 IBM. 2015. "Predictive maintenance benefits for the railway industry." IBM Travel & Transportation Industry 1-4.
 
 Wikipedia. 2002. Fast Fourier Transform. https://en.wikipedia.org/wiki/Fast_Fourier_transform.
-ó. 2013. RSS. https://en.wikipedia.org/wiki/Residual_sum_of_squares.
+‚Äî. 2013. RSS. https://en.wikipedia.org/wiki/Residual_sum_of_squares.
