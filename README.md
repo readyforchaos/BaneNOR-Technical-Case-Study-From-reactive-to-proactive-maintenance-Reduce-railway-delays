@@ -24,7 +24,7 @@ The optimal maintenance timing: higher availability and lower maintenance costs 
 
 ## Problem statement
 
-Railroads are one of the most asset-intensive industries in the world. In addition to tracks, rolling stock and terminals, railroads own communications infrastructure and other assets that must perform perfectly at all times, both for safety and efficiency. Points account for 33% of all delays in the Norwegian railway system (this has been identified prior to the hackfest). Being able to quantify a metric value for improvement is key in order to assess success. During the 5-day hackfest in June 2017, the core team decided that a decrease of 18% (resulting in 15% fault rate compared to 33%) would be looked upon as a success. This baseline vs. goal fault rate is something that will be tested the following year after the implementation of the new system has been concluded.   
+Railroads are one of the most asset-intensive industries in the world. In addition to tracks, rolling stock and terminals, railroads own communications infrastructure and other assets that must perform perfectly at all times, both for safety and efficiency. Points account for 33 % of all signal related delay hours between Oslo S and Asker (2016). (this has been identified prior to the hackfest). Being able to quantify a metric value for improvement is key in order to assess success. During the 5-day hackfest in June 2017, the core team decided that a decrease of 18% (resulting in 15% fault rate compared to 33%) would be looked upon as a success. This baseline vs. goal fault rate is something that will be tested the following year after the implementation of the new system has been concluded.   
 
 ![switch](images/switch.jpg)
 
@@ -79,14 +79,15 @@ There are multiple stages for a switch profile.
 **Unlocking:** The track switch is unlocked because it must be locked either to the right or left to allow a train to pass
 
 **Operation:** The actual movement of the tongue of the point machine
-Locking: Locking of the switch so that a train can pass
+
+**Locking:** Locking of the switch so that a train can pass
 
 
 ### How the alarm gets triggered
 
 ![operations](images/operations.png)
 
-Referenced to the picture above, the area under the curve is bound by the reference line and the wall on the left and right to the previous/next stage. Each divided part has a utilization percentage out of the total 100% of the section to see how much the observation is from the threshold (see ‘Unlocking’). If the variation is too big, the alarm goes off and the monitoring will notify the engineer about a possible error. Based on this information, the only thing the system know is whether the observation has reached its threshold within a stage or not, but not how fast the machine is deteriorating or how fast the area is growing. Three consecutive peaks within a 24 hours time frame will trigger the alarm.
+Referenced to the picture above, the area under the curve is bound by the reference line and the wall on the left and right to the previous/next stage. Each divided part has a utilization percentage out of the total 100% of the section to see how much the observation is from the threshold (see ‘Unlocking’). If the variation is too big, an irregularity will be recorded. Condition of the turnout is calculated from the ratio between the irregularities and switching operations and from the faults seen by the system.  When the poor condition criteria is reached, the monitoring system will notify the engineer about a possible error. Based on this information, the only thing the system know is whether the observation has reached its threshold within a stage or not, but not how fast the machine is deteriorating or how fast the area is growing.
 
 Based on the color of the switch (representing a state), a work order can be so that an engineer conducts some kind of maintenance on the respective switch.
 
@@ -94,7 +95,7 @@ Based on the color of the switch (representing a state), a work order can be so 
 
 **Summary of the current system:**
 
-- Measurement of current/current vs. time for successful switch
+- Measurement of power/current vs. time for successful switch
 - Measures own state in relation to its defined reference switch profile
 - Switch profile curve for each direction of the point machine
 - Overview of the total switch operation allows for state check for different phases of the switch
@@ -152,7 +153,7 @@ We performed some statistics (Residual Sum of Squares) where we took the error f
 
 ![operations2](images/operations2.png)
 
-The final spike in the locking section is so thin that it does not trigger the alarm. Whether it was important or not, was something that the current system didn’t notify about as it looked upon it as green at all times. It turned out that we managed to identify a new class which we called “over stroke”. This is a mechanical failure inside the point machine and not the switch (tongue) itself. This is a finding that the current system is unable to detect because it only measures voltages/amps.
+The final spike in the locking section is so thin that it does not trigger the alarm. Whether it was important or not, was something that the current system didn’t notify about as it looked upon it as green at all times. It turned out that we managed to identify a new class which we called “over stroke”. This is a mechanical failure inside the point machine and not the switch (tongue) itself. This is a finding that the current system is unable to detect because the area from the spike is so small that the measurement of the area does not increase significantly from the reference curve to be identified as an error.
 
 If we focus on the locking stage of the specific switch that recently failed with the actual data, we can clearly see that the condition has deteriorated over time.
 
@@ -481,7 +482,7 @@ If we imagine us having some kind of data for two variables (Xi)(Yi), the Yi dim
 
 ![1](images/1.png)
 
-If we think about the total amount of variance in our dependent variable that we are trying to explain, as being the sum of all the vertical distances of the plotted data points from the mean of Yi which is called the Y-bar. Since we also have some points that are going to be below Y-bar, we will not only sum the distances, but we will sum the square of the distances so that the sum from i equal 1 to N of Yi minus the mean (Y-bar) all squared. This equation represents the amount of variance in our dependent variable which we are trying to explain (so-called Total Sum of Squares = TTS). The TTS will explain why our dependent variable Y varies.
+If we think about the total amount of variance in our dependent variable that we are trying to explain, as being the sum of all the vertical distances of the plotted data points from the mean of Yi which is called the Y-bar. Since we also have some points that are going to be below Y-bar, we will not only sum the distances, but we will sum the square of the distances so that the sum from i equal 1 to N of Yi minus the mean (Y-bar) all squared. This equation represents the amount of variance in our dependent variable which we are trying to explain (so-called Total Sum of Squares = TSS). The TTS will explain why our dependent variable Y varies.
 
 ![2](images/2.png)
 
